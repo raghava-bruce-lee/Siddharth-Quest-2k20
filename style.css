@@ -1,0 +1,660 @@
+#loader{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #000 !important;
+    background: url(../images/3dot-preloader.gif) no-repeat center;
+    z-index: 99999;   
+}
+body{
+    background: url(../images/bg-gif.gif) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+.navbar-dark{
+    background: transparent;
+}
+nav.black{
+    background: rgba(0,0,0,0.8) !important;
+}
+.navbar-dark .navbar-toggler{
+    border: none;
+    outline: none;
+}
+ul li{
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important;
+}
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #3279bb !important;
+    font-weight: bold;
+}
+.hamburger{
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 28px;
+    height: 3px;
+    background: #e6e6e6;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+.hamburger::before, .hamburger::after{
+    content: '';
+    right: 0px;
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background: #e6e6e6;
+    z-index: 1;
+    transition: 0.2s ease;
+}
+.hamburger::before{
+    top: -10px;
+}
+.hamburger::after{
+    top: 10px;
+}
+.nav-bar-cross .hamburger{
+    background: #000;
+    transition: 0.2s ease;
+}
+.nav-bar-cross .hamburger::before{
+    transform: rotate(135deg);
+    top: 0;
+    transition: 0.3s ease;
+}
+.nav-bar-cross .hamburger::after{
+    transform: rotate(45deg);
+    top: 0;
+    transition: 0.3s ease;
+}
+/*.banner{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    color: #000;
+}*/
+.banner{
+    color: #fff;
+    background: rgba(0,0,0,0.8);
+    margin-left: 15px;
+}
+.banner h1, .banner p{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.quest-logo{
+    margin-top: 100px;
+    animation: quest-logo 3s 1;
+    margin-left: 30px;
+}
+
+@keyframes quest-logo{
+    0%{
+        margin-top: -200px;
+    }
+}
+.banner h1{
+    animation: h1 3s 1;
+}
+
+@keyframes h1{
+    0%{
+        margin-bottom: -70px;
+        color: #fff;
+        text-shadow: 0px 0px 5px;
+    }
+}
+.bg-img img{
+    background-size: 100% 100%;
+    width: 100%;
+    height: 760px;
+    background-attachment: fixed;
+    visibility: hidden;
+}
+
+#about{
+    margin: 30px;
+    background: rgba(0,0,0,0.8);
+}
+#about h1,p{
+    margin-top: 40px;
+    color: #fff;
+}
+#about .row img{
+    animation: about-img-ani 3s 1;
+    border-radius: 50%;
+}
+
+@keyframes about-img-ani{
+    0%{
+        height: 100px;
+        width: 100px;
+    }
+}
+.btn-info{
+    background: #3279bb !important;
+    border: none !important;
+    transition: 0.5s;
+}
+.btn-info:hover{
+    box-shadow: 1px 1px 7px #000;
+    border: none;
+    background: linear-gradient(90deg, #3279bb 0%, #39cfca 100%) !important;
+    transition: 0.5s;
+}
+.imp-dates{
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,0.8);
+    padding: 50px;
+}
+.imp-dates p{
+    font-size: 1.5rem;
+}
+.imp-dates span{
+    color: #ff0000;
+    font-size: 1.5rem;
+}
+.cash-prize, .topic-info{
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    margin: 50px;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#events h1{
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+}
+#events .tech-events, .non-tech-events{
+    box-shadow: 2px 2px 10px #000;
+    border-radius: 5px 20px 5px 20px;
+    margin: 50px 350px 50px 350px;
+    padding: 50px;
+    color: #000;
+    background: linear-gradient(90deg, #39cfca 0%, #3279bb 100%);
+}
+
+.events .heading, #management .heading{
+    text-align: center;
+    margin: 40px;
+    color: #fff;
+}
+.mob-matter{
+    display: none;
+}
+.events .container-fluid, #management .container-fluid{
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.events .container-fluid .cards, #management .container-fluid .cards{
+    position: relative;
+}
+.events .container-fluid .cards img, #management .container-fluid .cards img{
+    box-shadow: 5px 5px 20px #000;
+    justify-content: center;
+    text-align: center;
+    border: 0px solid;
+    border-radius: 10px;
+}
+.events .container-fluid .cards .face, #management .container-fluid .cards .face{
+    transition: 0.5s;
+    
+}
+.events .container-fluid .cards .face.face1{
+    position: relative;
+    background: #00004d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    border: 0 solid;
+    border-radius: 5px 20px 5px 20px;
+}
+.events .container-fluid .cards .face h3{
+    color: #fff !important;
+    font-weight: 400;
+}
+#management .container-fluid .cards .face.face1{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border: 0 solid;
+    border-radius: 20px;
+}
+.events .container-fluid .cards:hover .face.face1{
+    transform: translateY(0);
+    background: linear-gradient(90deg, #39cfca 0%, #3279bb 100%) !important;
+}
+#management .container-fluid .cards .face.face1{
+   background: linear-gradient(90deg, #39cfca 0%, #3279bb 100%) !important;
+}
+.events .container-fluid .cards .face.face2{
+    position: relative;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0,8);
+    transform: translateY(-220px);
+    visibility: hidden;
+}
+#management .container-fluid .cards .face.face2{
+    position: relative;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0,8);
+}
+.events .container-fluid .cards:hover .face.face2{
+    transform: translateY(0);
+    visibility: visible;
+}
+.events .container-fluid .cards .face.face1 .content, #management .container-fluid .cards .face.face1 .content{
+    margin: 0px 15px;
+}
+.events .container-fluid .cards .face.face1 .content h3, #management .container-fluid .cards .face.face1 .content h3{
+    text-align: center;
+    color: #000;
+    margin: 10px;
+}
+.events .container-fluid .cards .face.face2 .content p, #management .container-fluid .cards .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.convener{
+    background: rgba(0,0,0,0.8);
+    margin-bottom: 100px;
+}
+.convener h2, .convener h3, .convener p{
+    color: #fff;
+    text-align: center;
+}
+.convener img{
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #000;
+    margin-left: 65px;
+    transition: 0.5s ease;
+}
+.convener img:hover{
+    width: 1100px;
+    height: 570px;
+    transition: 0.5s ease;
+}
+.center{
+    text-align: center;
+    margin: 50px;
+}
+#management .container-fluid .cards .face.face1 .content p{
+    text-align: center;
+}
+#management h1{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+}
+#management .container .card{
+    margin: 50px;
+}
+
+footer{
+    margin-top: 30px;
+    background-color: rgba(0,0,0,0.8);
+}
+.footer-image{
+    text-align: center;
+}
+#contact img{
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px #000;
+    margin-top: 50px;
+}
+footer .row .container-fluid{
+    
+}
+footer .contact, footer .google-map, footer .social-icons{
+    padding: 80px 0px 0px 80px;
+}
+.g-map{
+    border: 0px solid;
+    border-radius: 10px;
+}
+.contact .p1, .g, .f{
+    color: #3279bb;
+    font-size: 50px;
+    font-family: candara;
+}
+.contact div p{
+    color: white;
+}
+
+footer .copyrights{
+    color: white;
+    text-align: center;
+    word-spacing: 4px;
+    margin-top: 100px;
+}
+.social-icons .fa{
+    font-size: 25px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 2px;
+    border-radius: 20%;
+}
+.fa-twitter {
+    padding: 6px;
+    height: 37px;
+    background: #00acee;
+    color: white;
+}
+.fa-facebook{
+    padding: 8px;
+    height: 40px;
+    background-color: #3b5998;
+    color: white;
+}
+.copyrights p{
+    color: white;
+    text-align: center;
+    margin-left: 15px;
+}
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+   .bg-img img{
+       width: 100%;
+       height: 600px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+   .navbar .navbar-brand img{
+       width: 60px;
+       height: 50px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+   .navbar-nav{
+       background: rgba(0,0,0,0.9) !important;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+   nav.black{
+       background: rgba(0,0,0,0.5) !important;
+       padding-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+   ul li a{
+       text-align: center;
+       margin-left: 40px;
+       /*border-bottom: 0.5px solid #595959;*/
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+   ul li:last-child{
+       margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 330px) {
+   .quest-logo img{
+       width: 200px !important;
+       margin-top: -50px !important;
+  }
+}
+@media only screen and (min-width: 331px) and (max-width: 800px) {
+   .quest-logo img{
+       width: 300px !important;
+       margin-top: -50px !important;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+   .banner h1{
+       font-size: 1.6rem;
+       padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+   .banner{
+       margin-left: 30px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+   .banner h1, .banner p{
+       margin: 0px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+   #about{
+        margin: 20px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+   #about img{
+       margin-top: 40px;
+       width: 100%;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+   #events .tech-events, .non-tech-events{
+       margin: 30px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+   #events h2{
+       text-align: center;
+       font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+   #events .tech-events, .non-tech-events{
+       margin: 50px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+   .events h1{
+       font-size: 2rem; 
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+   .des-matter{
+       display: none;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+   .mob-matter{
+       display: block;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+   .events .container-fluid .cards .face.face2{
+        transform: translateY(-250px);
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+   .events .container-fluid .cards img{
+       width: 100%;
+       height: 230px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+   .events .container-fluid .cards img{
+       width: 100%;
+       height: 400px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+   .container-fluid .cards .face.face2{
+       margin-right: -30px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+   .container-fluid .cards .face.face1{
+       margin-right: -30px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+   .convener h2, .convener h3, .convener p{
+       margin-left: 25px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+   .convener img{
+       width: 100%;
+       height: 230px;
+       margin-left: 25px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+   .convener img{
+       width: 40%;
+       height: 330px;
+       margin-left: 25px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+   .convener img:hover{
+       width: 130%;
+       height: 330px;
+       margin-left: -9px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+   .convener img:hover{
+       width: 100%;
+       height: 430px;
+       margin-left: 25px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+   #management .container-fluid .cards .face.face2{
+       margin-bottom: 40px;
+       
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+   #contact img{
+       width: 80%;
+       margin: 20px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+   .contact{
+       padding: 30px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+   .contact .p1, .social-icons .f, .google-map .g{
+       font-size: 40px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+   .social-icons{
+       padding: 30px;
+       margin-top: -30px;
+       margin-left: 0px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 330px) {
+   .copyrights{
+       font-size: 10px;
+       margin-top: 0px;
+       padding: 20px 0px;
+  }
+}
+@media only screen and (min-width: 331px) and (max-width: 450px) {
+   .copyrights{
+       font-size: 12px;
+       margin-top: 0px;
+       padding: 20px 0px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+   .social-icons .fa{
+       margin-top: -10px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 340px) {
+   footer .contact, footer .google-map, footer .social-icons{
+       padding: 40px 0px 0px 40px;
+       margin-left: -30px;
+  }
+}
+@media only screen and (min-width: 341px) and (max-width: 800px) {
+   footer .contact, footer .google-map, footer .social-icons{
+       padding: 40px 0px 0px 35px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+   footer .copyrights{
+       margin-top: 50px;
+  }
+}
+
+
+/* land scape 
+
+@media screen and (min-width: 560px) and (min-height: 300px) and (max-width: 900px) and (max-height: 500px){
+   .quest-logo img{
+       margin-top: 20px;
+       width: 150px;
+  }
+}
+
+/*  ipad and ipad pro  
+
+
+@media screen and (min-width: 700px) and (min-height: 1000px) and (max-width: 800px) and (max-height: 1100px){
+   .quest-logo img{
+       margin-top: -470px;
+       width: 200px;
+  }
+}
+@media screen and (min-width: 1000px) and (min-height: 1300px) and (max-width: 1100px) and (max-height: 1400px){
+   .quest-logo img{
+       margin-top: -670px;
+       width: 280px;
+  }
+}
+
+@media screen and (min-width: 700px) and (min-height: 1000px) and (max-width: 800px) and (max-height: 1100px){
+   .banner h1{
+       margin-top: -330px;
+  }
+}
+@media screen and (min-width: 1000px) and (min-height: 1300px) and (max-width: 1100px) and (max-height: 1400px){
+   .banner h1{
+       margin-top: -380px;
+  }
+}
